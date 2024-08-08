@@ -1,5 +1,5 @@
 let timer;
-let time = 20; // 20 minutes in seconds
+let time = 1500; // 25 minutes in seconds
 let isRunning = false;
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -27,7 +27,7 @@ function startTimer() {
       clearInterval(timer);
       notifyContentScript();
       isRunning = false;
-      time = 20; // Reset time to 20 minutes
+      time = 1500; // Reset time to 20 minutes
     }
   }, 1000);
 }
